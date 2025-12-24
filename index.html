@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+
+    <!-- Enlazar el CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="brand">Arquitectura Residencial</h1>
+            <nav class="main-nav">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Diseño de casas y espacios habitables</h2>
+            <p class="lead">Soluciones arquitectónicas funcionales y estéticas para proyectos residenciales.</p>
+            <div class="hero-actions">
+                <a href="./proyectos.html" class="btn primary" style="text-decoration:none;display:inline-block;">Ver proyectos</a>
+                <button id="contactar" class="btn outline" onclick="abrirModal()">Contacto</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container content">
+        <section id="proyectos" class="cards">
+            <article class="card">
+                <h3>Casa minimalista</h3>
+                <p>Proyecto de vivienda unifamiliar con enfoque en iluminación y materiales locales.</p>
+            </article>
+            <article class="card">
+                <h3>Renovación urbana</h3>
+                <p>Intervención en vivienda existente para mejorar eficiencia y confort.</p>
+            </article>
+            <article class="card">
+                <h3>Casa en pendiente</h3>
+                <p>Soluciones estructurales y paisajísticas para terrenos inclinados.</p>
+            </article>
+        </section>
+
+       
+
+        <section id="servicios" class="services">
+            <h3>Nuestros servicios</h3>
+            <ul>
+                <li>Diseño arquitectónico</li>
+                <li>Documentación técnica y planos</li>
+                <li>Gestión de obra y supervisión</li>
+                <li>Asesoría en materiales y acabados</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div>Jose Luis Lara Magaña &nbsp;|&nbsp; s23120248</div>
+            <div>&copy; <span id="year"></span> Arquitectura Residencial</div>
+        </div>
+    </footer>
+
+    <!-- Modal de contacto -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModal()">×</button>
+            <h3>Contacto</h3>
+            <p>Escribe tu mensaje y nos pondremos en contacto contigo.</p>
+            <form id="contactForm">
+                <input type="text" id="nombre" placeholder="Tu nombre" required />
+                <input type="email" id="email" placeholder="Tu correo" required />
+                <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                <div class="modal-actions">
+                    <button type="submit" class="btn primary">Enviar</button>
+                    <button type="button" class="btn outline" onclick="cerrarModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enlazar el JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
